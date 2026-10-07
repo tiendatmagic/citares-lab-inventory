@@ -1,7 +1,8 @@
 {
-  "name": "CITARES — Quản Lý Kho Thiết Bị & Phòng Lab Kỹ Thuật",
-  "short_name": "CITARES LIMS",
-  "description": "Hệ thống số hóa quản trị kho thiết bị thực hành, cánh tay robot công nghiệp, module PLC và linh kiện vi mạch phòng lab kỹ thuật CITARES (A Joint Facility of IDEA Group & Provina).",
+  "name": "CITARES — Nền Tảng Đào Tạo Kỹ Thuật Thực Chiến",
+  "short_name": "CITARES Learn",
+  "description": "Nền tảng đào tạo kỹ thuật thực chiến, quản lý khóa học và thực hành phòng lab CITARES (A Joint Facility of IDEA Group & Provina).",
+
   "start_url": "./",
   "display": "standalone",
   "background_color": "#081026",

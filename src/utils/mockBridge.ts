@@ -6,7 +6,7 @@ export function setupMockBridgeIfNeeded(): void {
 
   const listeners: Array<(state: CommaDeskLoginState) => void> = [];
   let currentState: CommaDeskLoginState = {
-    organizationId: 'citares-high-tech-facility',
+    organizationId: 'citares-training-facility',
     apiBase: '',
     status: 'idle',
     mfaToken: '',
@@ -26,7 +26,7 @@ export function setupMockBridgeIfNeeded(): void {
 
   const mockBridge: CommaDeskLoginBridge = {
     init(opts = {}) {
-      currentState.organizationId = opts.organizationId || 'citares-high-tech-facility';
+      currentState.organizationId = opts.organizationId || 'citares-training-facility';
       currentState.apiBase = opts.apiBase || '';
       emit({ status: 'idle', error: null });
       return this;
@@ -34,7 +34,7 @@ export function setupMockBridgeIfNeeded(): void {
 
     getContext() {
       return {
-        organizationId: currentState.organizationId || 'citares-high-tech-facility',
+        organizationId: currentState.organizationId || 'citares-training-facility',
         apiBase: currentState.apiBase || '',
         status: currentState.status,
       };
@@ -59,7 +59,7 @@ export function setupMockBridgeIfNeeded(): void {
       await new Promise((r) => setTimeout(r, 650));
 
       if (!username) {
-        emit({ status: 'error', error: 'Vui lòng nhập mã định danh thủ kho hoặc email nội bộ.' });
+        emit({ status: 'error', error: 'Vui lòng nhập mã học viên, email giảng viên hoặc tài khoản đào tạo.' });
         throw new Error('Vui lòng nhập tên đăng nhập');
       }
 
@@ -72,7 +72,7 @@ export function setupMockBridgeIfNeeded(): void {
       if ((username.includes('email') || username === 'multi') && !payload.emailSpecific) {
         emit({
           status: 'requires_email',
-          message: 'Tài khoản điều phối liên kết nhiều email. Vui lòng xác nhận email làm việc.',
+          message: 'Tài khoản đào tạo liên kết nhiều lớp học. Vui lòng xác nhận email đào tạo chính thức.',
         });
         return { status: 'requires_email' };
       }
@@ -115,5 +115,6 @@ export function setupMockBridgeIfNeeded(): void {
   };
 
   window.CommaDeskLogin = mockBridge;
-  console.info('[MockBridge] Initialized CITARES Lab & Inventory Mock Bridge for development preview.');
+  console.info('[MockBridge] Initialized CITARES Training Platform Mock Bridge for development preview.');
 }
+

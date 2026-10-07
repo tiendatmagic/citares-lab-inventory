@@ -80,7 +80,7 @@ export default function LoginForm() {
         }
 
         if (state.status === 'requires_org') {
-          setErrorMsg(state.error || 'Không xác định được tổ chức phòng lab liên kết. Vui lòng liên hệ ban quản trị.');
+          setErrorMsg(state.error || 'Không xác định được cơ sở đào tạo liên kết. Vui lòng liên hệ ban quản lý đào tạo.');
           setCurrentPanel('login');
           return;
         }
@@ -99,7 +99,7 @@ export default function LoginForm() {
   const handleLoginSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!username.trim()) {
-      setErrorMsg('Vui lòng nhập mã định danh thủ kho hoặc email đăng nhập.');
+      setErrorMsg('Vui lòng nhập mã học viên, email giảng viên hoặc tài khoản đào tạo.');
       return;
     }
     if (!password) {
@@ -160,8 +160,8 @@ export default function LoginForm() {
 
         {/* Tiêu đề Cổng Đăng Nhập */}
         <div className="mb-7">
-          <h2 className="text-[26px] font-extrabold text-[#0d1b3e] tracking-tight mb-1.5">Cổng Đăng Nhập</h2>
-          <p className="text-sm text-[#475569]">Hệ thống quản lý kho thiết bị &amp; phòng lab thực hành CITARES</p>
+          <h2 className="text-[26px] font-extrabold text-[#0d1b3e] tracking-tight mb-1.5">Cổng Đăng Nhập Đào Tạo</h2>
+          <p className="text-sm text-[#475569]">Nền tảng đào tạo kỹ thuật thực chiến &amp; học tập CITARES</p>
         </div>
 
         {/* Khung Thông Báo Lỗi */}
@@ -187,10 +187,10 @@ export default function LoginForm() {
             id="username"
             name="username"
             type="text"
-            label="Tài khoản / Mã nhân viên kho"
+            label="Tài khoản / Mã học viên / Email đào tạo"
             requiredMark
             prefixIcon={<UserIcon size={18} />}
-            placeholder="Nhập mã nhân viên hoặc email nội bộ"
+            placeholder="Nhập mã học viên (HV-...) hoặc email đào tạo"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
             autoComplete="username"
@@ -232,7 +232,7 @@ export default function LoginForm() {
             leftIcon={<ShieldCheckIcon size={16} />}
             className="w-full mt-1"
           >
-            <span id="btn-login-label">Đăng Nhập Quản Trị</span>
+            <span id="btn-login-label">Đăng Nhập Nền Tảng Đào Tạo</span>
           </Button>
         </form>
 
@@ -242,9 +242,9 @@ export default function LoginForm() {
           className="animate-fade-slide-up"
           hidden={currentPanel !== 'email'}
         >
-          <p className="text-[17px] font-bold text-[#0d1b3e] mb-1.5">Xác nhận email liên kết</p>
+          <p className="text-[17px] font-bold text-[#0d1b3e] mb-1.5">Xác nhận email liên kết đào tạo</p>
           <p className="text-sm text-[#475569] leading-relaxed mb-5">
-            Tài khoản quản trị này được gán cho nhiều phòng lab hoặc trung tâm. Vui lòng nhập email làm việc chính thức để tiếp tục.
+            Tài khoản học tập này được gán cho nhiều chương trình đào tạo hoặc phòng lab. Vui lòng nhập email chính thức để tiếp tục.
           </p>
           <form onSubmit={handleEmailSubmit} className="flex flex-col gap-4">
             <InputAffix
@@ -252,10 +252,10 @@ export default function LoginForm() {
               name="emailSpecific"
               type="email"
               ref={emailInputRef}
-              label="Email làm việc"
+              label="Email đào tạo"
               requiredMark
               prefixIcon={<MailIcon size={18} />}
-              placeholder="admin@citares.edu.vn"
+              placeholder="hocvien@citares.edu.vn"
               value={emailSpecific}
               onChange={(e) => setEmailSpecific(e.target.value)}
               autoComplete="email"
@@ -292,7 +292,7 @@ export default function LoginForm() {
         >
           <p className="text-[17px] font-bold text-[#0d1b3e] mb-1.5">Xác thực 2 bước (2FA)</p>
           <p className="text-sm text-[#475569] leading-relaxed mb-5">
-            Vui lòng nhập mã bảo mật OTP 6 chữ số từ ứng dụng xác thực của nhân viên kho (Google Authenticator / MS Authenticator).
+            Vui lòng nhập mã bảo mật OTP 6 chữ số từ ứng dụng xác thực của học viên/giảng viên (Google Authenticator / MS Authenticator).
           </p>
           <form onSubmit={handleOtpSubmit} className="flex flex-col gap-4">
             <InputAffix

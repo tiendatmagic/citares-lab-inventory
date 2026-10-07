@@ -1,7 +1,7 @@
 {
-  "name": "citares-lims",
+  "name": "citares-training-platform",
   "version": "1.0.0",
-  "description": "CITARES Lab & Inventory Management System - Hệ thống quản lý kho thiết bị, phòng lab kỹ thuật & vật tư thực hành CITARES (A Joint Facility of IDEA Group & Provina)",
+  "description": "CITARES Training & Learning Platform - Nền tảng đào tạo kỹ thuật thực chiến và phát triển kỹ sư công nghệ cao CITARES (A Joint Facility of IDEA Group & Provina)",
   "type": "module",
   "scripts": {
     "dev": "next dev",
@@ -11,14 +11,16 @@
   },
   "keywords": [
     "citares",
-    "lims",
-    "lab-management",
-    "inventory-management",
+    "training-platform",
+    "learning-management",
+    "technical-education",
     "robotics",
     "automation",
+    "semiconductor",
     "idea-group",
     "provina"
   ],
+
   "author": "",
   "license": "ISC",
   "dependencies": {

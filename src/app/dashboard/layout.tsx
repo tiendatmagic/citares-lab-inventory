@@ -1,15 +1,15 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Bảng Điều Khiển Quản Lý Kho Thiết Bị & Phòng Lab Kỹ Thuật CITARES',
+  title: 'Bảng Điều Khiển Nền Tảng Đào Tạo Kỹ Thuật Thực Chiến CITARES',
   description:
-    'Trung tâm điều hành và giám sát thời gian thực kho thiết bị, vật tư và hệ thống phòng lab thực hành CITARES (A Joint Facility of IDEA Group & Provina). Thống kê cánh tay robot công nghiệp, PLC Siemens, kit vi mạch FPGA và phiên mượn trả thiết bị thực hành.',
+    'Trung tâm điều phối khóa học, quản lý lớp đào tạo kỹ sư, lịch thực hành phòng lab SHTP và cấp chứng chỉ kỹ thuật tại CITARES (A Joint Training Facility of IDEA Group & Provina). Giám sát thời gian thực các chuyên đề Robotics ABB, PLC Siemens S7-1500, Vi Mạch Bán Dẫn và Cơ điện tử.',
   openGraph: {
-    title: 'Bảng Điều Khiển Quản Lý Kho Thiết Bị & Phòng Lab CITARES',
+    title: 'Bảng Điều Khiển Nền Tảng Đào Tạo Kỹ Thuật CITARES',
     description:
-      'Giám sát thời gian thực kho thiết bị robot, PLC, cảm biến, môi trường phòng lab và điều phối mượn trả thiết bị thực hành CITARES.',
+      'Giám sát thời gian thực lịch học, ca thực hành phòng lab robotics, tự động hóa PLC và tiến độ đào tạo kỹ sư thực chiến CITARES.',
     url: 'https://citares.edu.vn/dashboard',
-    siteName: 'CITARES Lab & Inventory Management System',
+    siteName: 'CITARES Training Platform',
     locale: 'vi_VN',
     type: 'website',
     images: [
@@ -17,18 +17,19 @@ export const metadata: Metadata = {
         url: './og-image.png',
         width: 1200,
         height: 630,
-        alt: 'CITARES Lab & Inventory Dashboard Overview',
+        alt: 'CITARES Training Platform Dashboard Overview',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Bảng Điều Khiển Quản Lý Kho Thiết Bị & Phòng Lab CITARES',
+    title: 'Bảng Điều Khiển Nền Tảng Đào Tạo Kỹ Thuật CITARES',
     description:
-      'Giám sát thời gian thực kho thiết bị robot, PLC, cảm biến và mượn trả thiết bị thực hành CITARES.',
+      'Giám sát thời gian thực lịch học, ca thực hành phòng lab robotics, tự động hóa PLC và tiến độ đào tạo kỹ sư thực chiến CITARES.',
     images: ['./og-image.png'],
   },
 };
+
 
 export default function DashboardLayout({
   children,
