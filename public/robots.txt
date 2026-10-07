@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /__commadesk/
+
+Sitemap: https://citares.edu.vn/sitemap.xml

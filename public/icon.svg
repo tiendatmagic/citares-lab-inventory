@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="citares-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#284ebd"/>
+      <stop offset="60%" stop-color="#20409a"/>
+      <stop offset="100%" stop-color="#122765"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="url(#citares-grad)"/>
+  <path d="M42 22 C39 17 33 16 27 18 C20 20.5 16 27 16 34 C16 41 20 47.5 27 50 C33 52 39 51 42 46" 
+        fill="none" 
+        stroke="#ffffff" 
+        stroke-width="7" 
+        stroke-linecap="round"/>
+  <circle cx="34" cy="34" r="4.5" fill="#e17335"/>
+  <circle cx="34" cy="34" r="2" fill="#ffffff"/>
+  <line x1="38.5" y1="34" x2="48" y2="34" stroke="#38bdf8" stroke-width="2.5" stroke-linecap="round"/>
+</svg>

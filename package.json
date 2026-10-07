@@ -1,0 +1,39 @@
+{
+  "name": "citares-lims",
+  "version": "1.0.0",
+  "description": "CITARES Lab & Inventory Management System - Hệ thống quản lý kho thiết bị, phòng lab kỹ thuật & vật tư thực hành CITARES (A Joint Facility of IDEA Group & Provina)",
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "package:zip": "node scripts/export-login-package.js"
+  },
+  "keywords": [
+    "citares",
+    "lims",
+    "lab-management",
+    "inventory-management",
+    "robotics",
+    "automation",
+    "idea-group",
+    "provina"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@tailwindcss/postcss": "^4.3.3",
+    "@types/node": "^26.6.4",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "next": "^16.3.8",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "tailwindcss": "^4.3.3",
+    "typescript": "^7.0.2"
+  },
+  "devDependencies": {
+    "@types/archiver": "^8.0.0",
+    "archiver": "^8.0.0"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "name": "CITARES — Quản Lý Kho Thiết Bị & Phòng Lab Kỹ Thuật",
+  "short_name": "CITARES LIMS",
+  "description": "Hệ thống số hóa quản trị kho thiết bị thực hành, cánh tay robot công nghiệp, module PLC và linh kiện vi mạch phòng lab kỹ thuật CITARES (A Joint Facility of IDEA Group & Provina).",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#081026",
+  "theme_color": "#20409a",
+  "icons": [
+    {
+      "src": "./icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./favicon.svg",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/svg+xml"
+    }
+  ]
+}
